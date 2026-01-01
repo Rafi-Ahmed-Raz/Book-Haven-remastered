@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven - Online Store</title>
+    <!-- 1. LINK TO CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 2. LINK TO ICONS (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Book Haven</h1>
+            <div id="user-status" class="status-bar" style="display: none;"></div>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#" onclick="changeContent('home')">Home</a></li>
+                <li><a href="#" onclick="changeContent('books')">Books</a></li>
+                <li><a href="#" onclick="changeContent('about')">About</a></li>
+                
+                <!-- Cart Link -->
+                <li id="nav-cart"><a href="#" onclick="changeContent('cart')">Cart <span id="cart-count" class="badge">(0)</span></a></li>
+                
+                <!-- Dynamic Auth Links -->
+                <li id="nav-login"><a href="#" onclick="changeContent('login')">Login</a></li>
+                <li id="nav-client" style="display:none;"><a href="#" onclick="changeContent('client-dashboard')">My Profile</a></li>
+                <li id="nav-admin" style="display:none;"><a href="#" onclick="changeContent('admin-dashboard')">Admin Panel</a></li>
+                <li id="nav-logout" style="display:none;"><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <div id="content">
+                <!-- Dynamic Content Loads Here -->
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#" onclick="changeContent('home')">Home</a></li>
+                        <li><a href="#" onclick="changeContent('books')">Books</a></li>
+                        <li><a href="#" onclick="changeContent('login')">Login</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <!-- SOCIAL ICONS -->
+                    <div class="social-links">
+                        <!-- Discord -->
+                        <a href="https://discord.gg/MhNMNT5aQX" target="_blank" class="social-icon discord" title="Join Discord">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        
+                        <!-- WhatsApp (Formatted for Click-to-Chat with +88 BD code) -->
+                        <a href="https://wa.me/8801799795349" target="_blank" class="social-icon whatsapp" title="Chat on WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/rafiahmed220" target="_blank" class="social-icon facebook" title="Follow on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@Fraixer01" target="_blank" class="social-icon youtube" title="Subscribe on YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <!-- EMAIL LINK -->
+                    <p>
+                        <i class="fas fa-envelope"></i> 
+                        <a href="mailto:rafiraza220@gmail.com" style="color: #bbb; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">
+                            rafiraza220@gmail.com
+                        </a>
+                    </p>
+                    <!-- PHONE LINK -->
+                    <p>
+                        <i class="fas fa-phone"></i> 
+                        <a href="tel:+8801799795349" style="color: #bbb; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">
+                            +88 01799795349
+                        </a>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Book Haven. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
